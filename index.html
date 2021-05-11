@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <header id="root">
+        <button @click='showMails'>View Generated Mails</button>
+        <div v-if='show === true'>
+            <ul v-for='mail in mails'>
+                <li>{{mail}}</li>
+            </ul>
+        </div>
+    </header>
+
+    <script src="app.js"></script>
 </body>
 </html>
